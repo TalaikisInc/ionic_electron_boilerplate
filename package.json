@@ -1,15 +1,33 @@
 {
-  "name": "ion-electron",
+  "name": "ionic-electron-boilerplate",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "homepage": "https://github.com/TalaikisInc/ionic_electron_boilerplate",
+  "description ": "Ionic Electron Boilerplate",
   "private": true,
   "scripts": {
+    "dev": "nf start",
+    "electron": "electron .",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "start": "ionic-app-scripts serve",
+    "ionic:serve": "ionic-app-scripts serve",
+    "ionic:build": "ionic-app-scripts build"
+  },
+  "main": "electron/electron.js",
+  "config": {
+    "ionic_bundler": "webpack",
+    "ionic_webpack": "./config/webpack.config.js"
+  },
+  "build": {
+    "appId": "com.ionelectron.ionic-electron-boilerplate",
+    "electronVersion": "2.0.1",
+    "asar":false,
+    "files": [
+      "www/**/*",
+      "electron/*"
+    ]
   },
   "dependencies": {
     "@angular/animations": "5.2.10",
@@ -33,7 +51,9 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.9",
+    "electron": "^2.0.1",
+    "electron-builder": "^20.13.4",
+    "foreman": "^3.0.0",
     "typescript": "~2.6.2"
-  },
-  "description": "An Ionic project"
+  }
 }
