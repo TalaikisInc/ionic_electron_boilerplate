@@ -23,7 +23,7 @@
   "build": {
     "appId": "com.ionelectron.ionic-electron-boilerplate",
     "electronVersion": "2.0.1",
-    "asar":false,
+    "asar": false,
     "files": [
       "www/**/*",
       "electron/*"
